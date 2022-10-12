@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
 import { MusicFormComponent } from './music-form.component';
 
@@ -8,9 +9,9 @@ describe('MusicFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MusicFormComponent ]
+      declarations: [MusicFormComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(MusicFormComponent);
     component = fixture.componentInstance;
@@ -20,6 +21,15 @@ describe('MusicFormComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  describe('Sould card', () => {
+    it('sould render card', () => {
+
+      const debugElement = fixture.debugElement.query(By.css('div#card-sound'));
+      expect(debugElement).toBeTruthy();
+    })
+
+  })
 
 
 });
