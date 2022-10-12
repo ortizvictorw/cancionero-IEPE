@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ISound } from 'src/app/shared/interfaces/sound.interfaces';
 
 @Component({
   selector: 'app-music-form',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./music-form.component.sass']
 })
 export class MusicFormComponent implements OnInit {
+  @Input() sounds:ISound[] = [];
 
   constructor() { }
 
