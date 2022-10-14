@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MusicFormComponent } from './music-form/music-form.component';
 
 
 
 @NgModule({
-  declarations: [
-    MusicFormComponent
-  ],
+  declarations: [],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+  ],
+  exports:[]
 })
 export class MusicFormModule { }

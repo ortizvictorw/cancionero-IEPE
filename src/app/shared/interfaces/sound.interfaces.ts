@@ -3,4 +3,7 @@ export interface ISound {
   duration:number;
   category:string;
   id:number;
+  lyrics:string;
+  audio?:string;
+  video?:string;
 }

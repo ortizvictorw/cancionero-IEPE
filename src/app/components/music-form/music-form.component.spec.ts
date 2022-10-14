@@ -36,20 +36,24 @@ describe('MusicFormComponent', () => {
           category: 'Amor',
           description: 'El amor de Dios es maravillosos',
           duration: 30000,
-          id: 1
+          id: 1,
+          lyrics:'letra'
         }
       ]
 
       component.sounds = soundsMock;
       fixture.detectChanges();
 
-      const debugElement = fixture.debugElement.query(By.css('div#card-sound'));
-      expect(debugElement).toBeTruthy();
+      const debugElementButton = fixture.debugElement.query(By.css('div button#button-sound'));
+
+      expect(debugElementButton).toBeTruthy();
+
     })
 
     it('sould not render with sounds is < 0', () => {
-      const debugElement = fixture.debugElement.query(By.css('div#card-sound'));
-      expect(debugElement).toBeFalsy();
+      const debugElementButton = fixture.debugElement.query(By.css('div button#button-sound'));
+
+      expect(debugElementButton).toBeFalsy();
 
     })
 
